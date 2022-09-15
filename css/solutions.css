@@ -1,44 +1,36 @@
-.ex-1-square {
-    width: 100px;
-    height: 100px;
-    border: 1px solid red;
+/*
+###########################################################
+STYLE - MY SOLUTIONS
+###########################################################
+*/
+/*---------------- box1 --> box5 --------------------*/
+.box1, .box2, .box3, .box4, .box5{
+    height: 300px;
+    width: 300px;
+    margin: 30px auto;
+    background-color: blue;
+    transition: all 2s linear;
 }
-.ex-2-square {
-    width: 100px;
-    height: 100px;
-    background: red;
+.box4{
+    opacity: 1;
 }
-.ex-3-square {
-    width: 100px;
-    height: 100px;
-    background: red;
-}
-.ex-4-square {
-    width: 100px;
-    height: 100px;
-    background: red;
-}
-.ex-5-square {
-    margin: 20px;
-    width: 60px;
-    height: 60px;
-    background: red;
-}
-.ex-6-img, .ex-7-img, .ex-8-img {
+/*---------------- box6 --> box9 --------------------*/
+.box6, .box7, .box8, .box9 {
     width: 500px;
+    transition: all 2s linear;
 }
-
-.ex-9-img {
+.box9 {
     margin: 50px 100px;
     width: 400px;
 }
-.ex-10-icon {
+
+/*---------------- box10 --> box11 --------------------*/
+.box10, .box11{
     font-size: 60px;
 }
-.ex-11-icon {
-    font-size: 60px;
-}
-.ex-12-button, .ex-13-button {
+
+/*---------------- box12 --> box13 --------------------*/
+.box12-button, .box13-button {
     position: relative;
     display: block;
     width: 200px;
@@ -51,7 +43,7 @@
     text-align: center;
     text-decoration: none;
 }
-.ex-12-top-white, .ex-13-top-white {
+.box12-top-white, .box13-top-white {
     position: absolute;
     top: -10px;
     left: 10%;
@@ -59,7 +51,7 @@
     width: 60px;
     height: 20px;
 }
-.ex-12-bottom-white, .ex-13-bottom-white {
+.box12-bottom-white, .box13-bottom-white {
     position: absolute;
     bottom: -10px;
     right: 20%;
@@ -69,129 +61,97 @@
 }
 /*
 ###########################################################
-
+EFFECTS - MY SOLUTIONS
 ###########################################################
 */
-div.box1{
-    height: 300px;
-    width: 300px;
-    margin: 30px auto;
-    background-color: blue;
-    transition: background-color 4s ease;
-}
 
-div.box1:hover{
+.box1:hover{
     background-color: red;
-    /*border-radius: 400px;
-    transform: rotate(180deg);*/
 }
 
-div.box2{
-    height: 300px;
-    width: 300px;
-    margin: 30px auto;
-    background-color: blue;
-    transition: width 4s ease;
-}
-
-div.box2:hover{
+.box2:active{
     width: 500px;
 }
 
-div.box3{
-    height: 300px;
-    width: 300px;
-    margin: 30px auto;
-    background-color: blue;
-    transition: border-radius 4s ease;
-}
-
-div.box3:hover{
+.box3:hover{
     border-radius: 100%;
 }
 
-div.box4{
-    height: 300px;
-    width: 300px;
-    margin: 30px auto;
-    background-color: blue;
-    opacity: 1;
-    transition: opacity 4s ease;
-}
-
-div.box4:hover{
+.box4:hover{
     opacity: 0;
 }
 
-div.box5{
-    height: 300px;
-    width: 300px;
-    margin: 30px auto;
-    background-color: blue;
-    transition: height width 4s ease;
-}
-
-div.box5:hover{
+.box5:hover{
     height: 400px;
     width: 400px;
 }
-div.box5:active{
+.box5:active{
     height: 200px;
     width: 200px;
 }
-.ex-6-img:hover {
-    filter: grayscale(1);
+
+.box6:hover {
+    filter: grayscale(0.75);
 }
-.ex-7-img {
-    transition: 2s;
+
+.box7:hover {
+    filter: blur(5px) contrast(200%);
 }
-.ex-7-img:hover {
+
+
+.box8:hover {
     filter: grayscale(.6) sepia(.5);
+    border-radius: 60px;
 }
-.ex-8-img {
-    transition: 2s;
-}
-.ex-8-img:hover {
-    filter: grayscale(.6) sepia(.5);
-    border-radius: 20px;
-}
-.ex-9-img {
-    transition: 2s;
-}
-.ex-9-img:hover {
+.box9:hover {
     filter: grayscale(.6) sepia(.5);
     border-radius: 20px;
     transform: scale(1.5);
 }
-.ex-10-icon {
+
+/*---------- BOX10 ----------*/
+.box10 {
     animation: spin 1s linear infinite;
+}
+.box10:hover {
+    font-size: 100px;
+    transition: all 2s linear;
 }
 @keyframes spin {
     0% {
         transform: rotate(1turn);
     }
+    90% {
+        transform: rotate(90deg);
+    }    
 }
 
-.ex-11-icon:hover{
-    animation-name: round-rotate ;
+/*---------- BOX11 ----------*/
+.box11:hover{
+    animation-name: round-rotate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 
 }
-
 @keyframes round-rotate {
-    0%   {rotate: 36deg; color: #00ff00;}
-    10%  {rotate: 72deg; color: #00ff00;}
-    20%  {rotate: 108deg; color: #00ff00;}
-    30%  {rotate: 144deg; color: #00ff00;}
-    40%  {rotate: 180deg; color: #00ff00;}
-    50%  {rotate: 216deg; color: #00ff00;}
-    60%  {rotate: 252deg; color: #ff0000;}
-    100% {rotate: 0deg; color: #ff0000;}
+    0%   {rotate: 0.5rad; color: #00ff00;}
+    10%  {rotate: 1rad; color: #9dff00;}
+    20%  {rotate: 1.5rad; color: #bbff00;}
+    30%  {rotate: 2rad; color: #ffe600;}
+    40%  {rotate: 2.5rad; color: #ff8800;}
+    50%  {rotate: 3rad; color: #ff6600;}
+    60%  {rotate: 3.14rad; color: #ff0000;}
+    70%  {rotate: 3.5rad; color: #ff0040;}
+    80%  {rotate: 4rad; color: #6f00ff;}
+    90%  {rotate: 4.71rad; color: #4400ff;}
+    100% {rotate: 0rad; color: #00eeff;}
 }
-.ex-12-button:hover .ex-12-top-white {
+
+/*---------- BOX12 ----------*/
+.box12-button:hover .box12-top-white {
     animation: moveTopWhite 2s linear;
 }
+
 @keyframes moveTopWhite {
     0% {
         left: 10%;
@@ -203,22 +163,23 @@ div.box5:active{
         left: 10%;
     }
 }
-.ex-12-button:hover .ex-12-bottom-white {
+.box12-button:hover .box12-bottom-white {
     animation: moveBottomWhite 2s linear;
 }
 @keyframes moveBottomWhite {
     0% {
-        right: 20%;
+        right: 80%;
     }
     50% {
         right: calc(100% - 60px);
     }
     100% {
-        right: 20%;
+        right: 80%;
     }
 }
 
-.ex-13-button:hover .ex-13-top-white {
+/*---------- BOX13 ----------*/
+.box13-button:hover .box13-top-white {
     animation: moveTopWhiteCompletely 2s linear;
 }
 @keyframes moveTopWhiteCompletely {
@@ -247,7 +208,7 @@ div.box5:active{
         top: -10px;
     }
 }
-.ex-13-button:hover .ex-13-bottom-white {
+.box13-button:hover .box13-bottom-white {
     animation: moveBottomWhiteCompletely 2s linear;
 }
 @keyframes moveBottomWhiteCompletely {
